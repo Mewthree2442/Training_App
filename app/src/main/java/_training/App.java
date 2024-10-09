@@ -4,6 +4,7 @@
 package _training;
 
 public class App {
+    // Function that returns string "Hello World!"
     public String getGreeting() {
         return "Hello World!";
     }
