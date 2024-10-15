@@ -26,6 +26,9 @@ public class VariablesSolution {
         boolean ateBreakfast = true;
         boolean ateLunch = true;
         boolean ateDinner = false;
+
+        System.out.println(ateBreakfast && ateLunch);
+        System.out.println(ateLunch && ateDinner);
         
     }
 }

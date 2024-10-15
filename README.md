@@ -108,3 +108,18 @@ if ((brushedTeeth || tookMints) && didHomework && preparedForRobotics) {
 ```
  - Read the code over, substituting in your mind "otherwise" in place of "else."
  - It should make some sense. If I did everything, then I can go. Otherwise, if I didn't (not) freshen up, I need to do that. Otherwise, if I need to finish my homework, I will do that. Otherwise, if I am not prepared for robotics, I need to get prepared.
+
+### While Loops
+ 1. Open While.java & run it.
+ - You may wonder - How come there are 9 lines printed to the console, when there are only 2 println statements?
+ - A while loop is a block of code that will run *forever* until a condition is met. In this example, the condition is `hoursWorked < 8`. So, it will loop forever when you have worked less than 8 hours.
+ - Every iteration, it will print how many hours you have worked so far, then you will work 1 hour. (You will add 1 to hoursWorked). You will keep doing this when you have worked less than 8 hours, until you pass it, so you don't need to work anymore.
+ 2. Change the value 8 in the less-than to 5 and run.
+ - How did the result change?
+ 3. Change the `+` in the for loop when incrementing the hoursWorked into a `-`.
+ - Uh oh. The code is going to run forever! Look at the console, then stop the code with the stop sign in the top center of your screen.
+ - This happens because evey time the while runs, it will decrement the hoursWorked, so it will never go up and past 8 hours. You will work hours backwards somehow, and eventually you will have worked -613620 hours...
+ - Think of this happening on the robot. You accidentally make the robot move forward while the distance to the target is more than 5, but instead of decreasing the distance, you increase it... Not good! You always have to be very careful when writing for loops to make sure it doesn't crash when running.
+ 4. Add an if statement checking if hoursWorked is less than 1 at the top of the loop, and inside the statement, add this code: `break;`
+ - What happens?
+ - Ok, so working -1 hours and then stopping is not realistic, but this code does show as a check to make sure that something unrealistic doesn't happen, and prevents it becoming a ***major*** problem.
