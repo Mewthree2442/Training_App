@@ -69,3 +69,42 @@ Basic Java application for training.
  - A boolean is essentially a yes or no, but instead of yes, we say "true", and instead of no, we say "false".
  - The `&&` means "and." Look through the code. It prints out ateBreakfast && ateLunch, or ateBreakfast *and* ateLunch. We ate both of them (they both are true), so it will say true. Meanwhile, ateLunch is true, but ateDinner is *not*, so on the second print, we did *not* eat lunch and eat dinner.
  - We will talk more about booleans and logic soon.
+
+## Logic
+### If statements
+ 1. Read through IfStatement.java, and run it.
+ - The `||` operator means "or."
+
+<details>
+<summary>Click for explanation</summary>
+IfStatement.java declares 4 booleans. It then goes into an if statement, which checks if something is true, and then runs code. Inside the parentheses, it has a set of conditions. The first is if you brushedTeeth or tookMints. You brushedTeeth, and didn't take mints, but this is an or, which means only one has to be true. The second condition is if you did your homework, which is false. The third is preparedForRobotics, which is true. Because didHomeWork is false, you aren't preparedForRobotics and *didHomework*, so you can't go (the if statement isn't run).  
+</details>
+ 2. Modify the if statement's ending to the code below.
+
+```java
+if ( (brushedTeeth || tookMints) && didHomework && preparedForRobotics) {
+    System.out.println("I can go to robotics tonight!");
+} else {
+    System.out.println("I can't go to robotics yet.");
+}
+```
+ - Now the code is skipping over the if statement, but "else" means otherwise. So, if I did all of my stuff, then I can go, *otherwise*, I can't go.
+ - Try to add another if statement to check for each boolean, and see if it's *not* true.
+    - Hint: `!(variable)` = not, reverses the boolean
+    - For example, `!true` = false, `!false` = true
+    - See the solution in IfStatementSolution.java.
+ 3. Shorten the code to below.
+
+```java
+if ((brushedTeeth || tookMints) && didHomework && preparedForRobotics) {
+    System.out.println("I can go to robotics tonight!");
+} else if (!(brushedTeeth || tookMints)) {
+    System.out.println("Gotta freshen up!");
+} else if (!didHomework) {
+    System.out.println("Oh darn, I gotta do my Math homework!");
+} else if (!preparedForRobotics) {
+    System.out.println("Oop, I need to finish finding my sponsors!");
+}
+```
+ - Read the code over, substituting in your mind "otherwise" in place of "else."
+ - It should make some sense. If I did everything, then I can go. Otherwise, if I didn't (not) freshen up, I need to do that. Otherwise, if I need to finish my homework, I will do that. Otherwise, if I am not prepared for robotics, I need to get prepared.
