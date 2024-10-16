@@ -50,7 +50,7 @@ Basic Java application for training.
  </details>
 
 #### Float
- 1. Add `float myDecimal 2.5f;` and `float mySecondDecimal 5.0f;` to Variables.java.
+ 1. Add `float myDecimal = 2.5f;` and `float mySecondDecimal = 5.0f;` to Variables.java.
  - Float stands for "Floating-point decimal."
  - You must use an f after the number declaration, and it must be a decimal.
  2. Divide myDecimal by mySecondDecimal and store it in myLastDecimal, and print the output.
