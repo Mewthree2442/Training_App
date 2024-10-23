@@ -163,3 +163,21 @@ if ((brushedTeeth || tookMints) && didHomework && preparedForRobotics) {
  2. Was it annoying to write so much code?
  - 64+ lines for writing 16 problems must be super annoying, and resulting in lots of copy and pasting.
  - There is an easier way to repeat code that we are going to learn now.
+
+## Functions
+ 1. Open and run Functions.java.
+ - What do you notice about the code?
+ - What do you notice about the result?
+ 2. Break down what you see.
+ ```
+   This tells Java that we want a *function* in our class
+   |     This tells Java we won't return anything
+   |     |    This is what we name our function
+   |     |    | These parentheses show how we call our function   
+   v     v    v v
+ static void printHi(){
+    // This is the code we are running
+    System.out.println("Hello!");
+ }
+ ```
+ - This breakdown uses unknown language like class, and paramaters, which we will learn later.
