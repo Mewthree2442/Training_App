@@ -124,33 +124,100 @@ if ((brushedTeeth || tookMints) && didHomework && preparedForRobotics) {
  - What happens?
  - Ok, so working -1 hours and then stopping is not realistic, but this code does show as a check to make sure that something unrealistic doesn't happen, and prevents it becoming a ***major*** problem.
 
- ## Apply What You Know
+## Apply What You Know
  Lets create a handful of math problems and print the results. The point of this task to apply what you have learned so far. To do this, do the following:
  1. Create 4 addition calculations
- - Example: 1 + 2 = 3
+ - Example: `1 + 2 = 3`
  - There should be three variables created for each number in each calculation
  - One math problem should be done with integers
  - One math problem should be done with floats
  - One math problem should be down with doubles
  - One math problem of your choice
  2. Create 4 subtraction calculations
- - Example: 1 - 2 = -1
+ - Example: `1 - 2 = -1`
  - There should be three variables created for each number in each calculation
  - One math problem should be done with integers
  - One math problem should be done with floats
  - One math problem should be down with doubles
  - One math problem of your choice
  3. Create 4 multiplication calculations
- - Example: 2 * 2 = 4
+ - Example: `2 * 2 = 4`
  - There should be three variables created for each number in each calculation
  - One math problem should be done with integers
  - One math problem should be done with floats
  - One math problem should be down with doubles
  - One math problem of your choice
   4. Create 4 division calculations
- - Example: 4 / 2 = 2
+ - Example: `4 / 2 = 2`
  - There should be three variables created for each number in each calculation
  - One math problem should be done with integers
  - One math problem should be done with floats
  - One math problem should be down with doubles
  - One math problem of your choice
+
+### Reflection
+ 1. How well did you do?
+ - Think about how many attempts it took to get it right.
+    - Even the best programmers have to get it wrong multiple times before their code finally works.
+    - It's okay if you needed to get help, even when working on the robot, you may need to get help from your sub-leads to get help with a new problem you have never seen before.
+ 2. Was it annoying to write so much code?
+ - 64+ lines for writing 16 problems must be super annoying, and resulting in lots of copy and pasting.
+ - There is an easier way to repeat code that we are going to learn now.
+
+## Functions
+ 1. Open and run Functions.java.
+ - What do you notice about the code?
+ - What do you notice about the result?
+ 2. Break down what you see.
+ ```
+   This tells Java that we want a *function* in our class
+   |     This tells Java we won't return anything
+   |     |    This is what we name our function
+   |     |    |     These parentheses include paramaters. (none)   
+   v     v    v     v
+ static void printHi(){
+    // This is the code we are running
+    System.out.println("Hello!");
+ }
+ ```
+ - This breakdown uses unknown language like class, and paramaters, which we will learn later.
+ 3. Edit the code in the function.
+ - Add some other println to the function. Remember, the code should be put in after the first println, but before the ending curly bracet (`}`).
+ - Run the code, and see what happens.
+ 4. Functions make code easier to write and read.
+ - Think back on the MathProblems.java you wrote. How could you improve this with functions?
+ - You will need to learn one more thing about functions before you can rewrite MathProblems with functions.
+
+### Parameters
+ 1. Open Parameters.java, and run it.
+ - What is different about the calls (the function name with parentheses) in main?
+ - Change some of the numbers in the parentheses of the calls.
+ - Look through the `square(int num)` function. What do you think it does?
+ 2. Change the square function into a multiply function.
+ - While this may seem redundant (Why not just use `*`?), it is easy for practice.
+ - Add another parameter into the square function, by adding a comma, and then another variable declaration.
+
+<details>
+<summary>Click for solution.</summary>
+static void square(int num, int num2)
+</details>
+
+ - Rename the function by right-clicking on "square" and in the menu, clicking on "Rename Symbol".
+ - Update all of the function calls to use this new paramater with a comma.
+
+<details>
+<summary>Click for solution.</summary>
+multiply(3, 6);
+multiply(2, 9);
+</details>
+
+ 3. Pass in some variables to `multiply()`.
+ - Create some `int` variables in main.
+ - Pass in the variables to the `multiply()` function, by just saying their name instead of a number. Example: `multiply(myNum,myNum2);`
+ 4. Try to pass in a decimal number (double or float) to multiply.
+ - `multiply(2.3,6.1);`
+ - The red squigglies on `multiply` read: `The method multiply(int, int) in the type ParametersSolution is not applicable for the arguments (double, double).` This is basically telling you that multiply *MUST* take in 2 ints, and cannot take in 2 doubles.
+ 5. Duplicate (copy & paste) multiply, and modify it to take in 2 doubles, and name it `multiplyDecimals`.
+ - Try to change the `multiply(2.3,6.1);` into a `multiplyDecimals(2.3,6.1);`.
+ - What if you needed to use floats?
+ - Think about if there were way more number types. How many functions will you need to create?
