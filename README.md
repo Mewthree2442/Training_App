@@ -173,11 +173,51 @@ if ((brushedTeeth || tookMints) && didHomework && preparedForRobotics) {
    This tells Java that we want a *function* in our class
    |     This tells Java we won't return anything
    |     |    This is what we name our function
-   |     |    | These parentheses show how we call our function   
-   v     v    v v
+   |     |    |     These parentheses include paramaters. (none)   
+   v     v    v     v
  static void printHi(){
     // This is the code we are running
     System.out.println("Hello!");
  }
  ```
  - This breakdown uses unknown language like class, and paramaters, which we will learn later.
+ 3. Edit the code in the function.
+ - Add some other println to the function. Remember, the code should be put in after the first println, but before the ending curly bracet (`}`).
+ - Run the code, and see what happens.
+ 4. Functions make code easier to write and read.
+ - Think back on the MathProblems.java you wrote. How could you improve this with functions?
+ - You will need to learn one more thing about functions before you can rewrite MathProblems with functions.
+
+### Parameters
+ 1. Open Parameters.java, and run it.
+ - What is different about the calls (the function name with parentheses) in main?
+ - Change some of the numbers in the parentheses of the calls.
+ - Look through the `square(int num)` function. What do you think it does?
+ 2. Change the square function into a multiply function.
+ - While this may seem redundant (Why not just use `*`?), it is easy for practice.
+ - Add another parameter into the square function, by adding a comma, and then another variable declaration.
+
+<details>
+<summary>Click for solution.</summary>
+static void square(int num, int num2)
+</details>
+
+ - Rename the function by right-clicking on "square" and in the menu, clicking on "Rename Symbol".
+ - Update all of the function calls to use this new paramater with a comma.
+
+<details>
+<summary>Click for solution.</summary>
+multiply(3, 6);
+multiply(2, 9);
+</details>
+
+ 3. Pass in some variables to `multiply()`.
+ - Create some `int` variables in main.
+ - Pass in the variables to the `multiply()` function, by just saying their name instead of a number. Example: `multiply(myNum,myNum2);`
+ 4. Try to pass in a decimal number (double or float) to multiply.
+ - `multiply(2.3,6.1);`
+ - The red squigglies on `multiply` read: `The method multiply(int, int) in the type ParametersSolution is not applicable for the arguments (double, double).` This is basically telling you that multiply *MUST* take in 2 ints, and cannot take in 2 doubles.
+ 5. Duplicate (copy & paste) multiply, and modify it to take in 2 doubles, and name it `multiplyDecimals`.
+ - Try to change the `multiply(2.3,6.1);` into a `multiplyDecimals(2.3,6.1);`.
+ - What if you needed to use floats?
+ - Think about if there were way more number types. How many functions will you need to create?
