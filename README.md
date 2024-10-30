@@ -164,7 +164,7 @@ if ((brushedTeeth || tookMints) && didHomework && preparedForRobotics) {
  - 64+ lines for writing 16 problems must be super annoying, and resulting in lots of copy and pasting.
  - There is an easier way to repeat code that we are going to learn now.
 
-## Functions
+## Functions <!-- TODO: Write Machines explanation -->
  1. Open and run Functions.java.
  - What do you notice about the code?
  - What do you notice about the result?
@@ -188,7 +188,7 @@ if ((brushedTeeth || tookMints) && didHomework && preparedForRobotics) {
  - Think back on the MathProblems.java you wrote. How could you improve this with functions?
  - You will need to learn one more thing about functions before you can rewrite MathProblems with functions.
 
-### Parameters
+### Parameters <!-- TODO: Continue Machines explanation -->
  1. Open Parameters.java, and run it.
  - What is different about the calls (the function name with parentheses) in main?
  - Change some of the numbers in the parentheses of the calls.
@@ -219,5 +219,31 @@ multiply(2, 9);
  - The red squigglies on `multiply` read: `The method multiply(int, int) in the type ParametersSolution is not applicable for the arguments (double, double).` This is basically telling you that multiply *MUST* take in 2 ints, and cannot take in 2 doubles.
  5. Duplicate (copy & paste) multiply, and modify it to take in 2 doubles, and name it `multiplyDecimals`.
  - Try to change the `multiply(2.3,6.1);` into a `multiplyDecimals(2.3,6.1);`.
- - What if you needed to use floats?
- - Think about if there were way more number types. How many functions will you need to create?
+ 4. Problem with functions currently:
+ - What if you didn't want to just print out the result, but pass it into another function, or do something else rather than printing?
+
+### Return Values <!-- TODO: Finish Machines explanation -->
+ 1. Open Return.java, and look through the code.
+ - Run the code. What is it doing?
+ - The `return` keyword is put at the end of the function running. It is when the function is done running, and it gives a result.
+ - You can use the return value like a variable. This means, you can call the function wherever you would use a variable, even storing the return in a variable!
+ 2. Remove the variables, replacing them with function calls in the code.
+ - Call `square(5)` and `square(2)` in place of squareFive and squareTwo in the println statement.
+ - Try adding more `square()` calls in code, like another print statement.
+ 3. Assign the result from a `square()` to a float.
+ - Before running, what do you think will happen?
+ - Try fixing the function.
+    - Remember - the paramater used in the template is a float.
+
+<details>
+<summary>Click for solution.</summary>
+static float square(float num){
+    //code
+}
+<br>
+Turns into...
+<br>
+static int square(int num){
+    //code
+}
+</details>
