@@ -164,7 +164,7 @@ if ((brushedTeeth || tookMints) && didHomework && preparedForRobotics) {
  - 64+ lines for writing 16 problems must be super annoying, and resulting in lots of copy and pasting.
  - There is an easier way to repeat code that we are going to learn now.
 
-## Functions
+## Functions <!-- TODO: Write Machines explanation -->
  1. Open and run Functions.java.
  - What do you notice about the code?
  - What do you notice about the result?
@@ -188,7 +188,7 @@ if ((brushedTeeth || tookMints) && didHomework && preparedForRobotics) {
  - Think back on the MathProblems.java you wrote. How could you improve this with functions?
  - You will need to learn one more thing about functions before you can rewrite MathProblems with functions.
 
-### Parameters
+### Parameters <!-- TODO: Continue Machines explanation -->
  1. Open Parameters.java, and run it.
  - What is different about the calls (the function name with parentheses) in main?
  - Change some of the numbers in the parentheses of the calls.
@@ -222,7 +222,7 @@ multiply(2, 9);
  4. Problem with functions currently:
  - What if you didn't want to just print out the result, but pass it into another function, or do something else rather than printing?
 
-### Return Values
+### Return Values <!-- TODO: Finish Machines explanation -->
  1. Open Return.java, and look through the code.
  - Run the code. What is it doing?
  - The `return` keyword is put at the end of the function running. It is when the function is done running, and it gives a result.
@@ -236,7 +236,7 @@ multiply(2, 9);
     - Remember - the paramater used in the template is a float.
 
 <details>
-<summary>Click for solution</summary>
+<summary>Click for solution.</summary>
 static float square(float num){
     //code
 }
