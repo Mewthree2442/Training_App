@@ -146,6 +146,16 @@ if ((brushedTeeth || tookMints) && didHomework && preparedForRobotics) {
  4. Create a for inside of the existing for.
  - Try showing you are running in quarters of a circle!
  - Remember, 4 is *NOT* less than 4, so it will show you run 0,1,2,3 quarters if you are `i < 4`.
+ <details>
+ <summary>Click for solution!</summary>
+ for(int quarters = 0; quarters < 5; quarters++){
+    <br>System.out.println("I ran in " + quarters + " quarters of the " + i + " circle!");
+ <br>}
+ </details>
+
+ 5. Experinment with for loops more.
+ - Try making it count backwards! (You will need a greater than in your conditional.)
+ - Print the current circle in the quarter loop! (If you have two loops inside eachother.)
 
 ## Apply What You Know
  Lets create a handful of math problems and print the results. The point of this task to apply what you have learned so far. To do this, do the following:
