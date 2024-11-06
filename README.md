@@ -247,3 +247,14 @@ static int square(int num){
     //code
 }
 </details>
+
+## Object-Oriented Programming
+ 1. Open Robots.java.
+ - Look through the code. What is it doing?
+ 2. Drive the robot around some more.
+ - Add more actions for the robot through functions, like turn or intake.
+ 3. Make another robot.
+ - Rename the functions for the current robot by adding a label at the end, like 1.
+ - Copy the functions, and edit them to specify that a different robot is doing the actions.
+ - Rename the new functions so that you can specify which robot is doing what action in the code.
+ 4. Add another action to both of the robots.
