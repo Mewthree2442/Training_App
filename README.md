@@ -124,6 +124,39 @@ if ((brushedTeeth || tookMints) && didHomework && preparedForRobotics) {
  - What happens?
  - Ok, so working -1 hours and then stopping is not realistic, but this code does show as a check to make sure that something unrealistic doesn't happen, and prevents it becoming a ***major*** problem.
 
+### For Loops
+ 1. Open For.java and read through the code.
+ - The code for `for` loops looks a little confusing, but it makes sense when you break it down.
+     - `for (int i = 0; i < 20; i++) { }` breaks down into:
+ ```java
+ int i = 0;
+ while(i < 20){
+    // Code inside for loop here!
+    i++;
+ }
+ ```
+ - Yep, a for loop is only a disguised while loop!
+ 2. Change the value of how much the loop *iterates*.
+ - An iteration is one time the loop runs.
+ - Going back to the while example, you would want to change the conditional section to change how many times the loop runs. Look between the while example and the for loop, and find where you would see the conditional.
+ 3. Why use for instead of while?
+ - For loops are more compact, because they have the iterator (counter) built in.
+ - With while loops, you need to initialize a variable before the loop, have the conditional statement, and have to remember to increment the variable inside the loop.
+ - With for loops, you can just have the declaration, conditional, and increment all together in the statement.
+ 4. Create a for inside of the existing for.
+ - Try showing you are running in quarters of a circle!
+ - Remember, 4 is *NOT* less than 4, so it will show you run 0,1,2,3 quarters if you are `i < 4`.
+ <details>
+ <summary>Click for solution!</summary>
+ for(int quarters = 0; quarters < 5; quarters++){
+    <br>System.out.println("I ran in " + quarters + " quarters of the " + i + " circle!");
+ <br>}
+ </details>
+
+ 5. Experinment with for loops more.
+ - Try making it count backwards! (You will need a greater than in your conditional.)
+ - Print the current circle in the quarter loop! (If you have two loops inside eachother.)
+
 ## Apply What You Know
  Lets create a handful of math problems and print the results. The point of this task to apply what you have learned so far. To do this, do the following:
  1. Create 4 addition calculations
@@ -247,3 +280,6 @@ static int square(int num){
     //code
 }
 </details>
+
+# Revised Section
+ Go back up to the end of the logic section to see for loops, or [click here](#for-loops).
