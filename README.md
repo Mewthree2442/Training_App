@@ -282,6 +282,7 @@ static int square(int num){
 </details>
 
 ## Object-Oriented Programming
+### Why do we do OOP?
  1. Open Robots.java.
  - Look through the code. What is it doing?
  2. Drive the robot around some more.
@@ -290,4 +291,11 @@ static int square(int num){
  - Rename the functions for the current robot by adding a label at the end, like 1.
  - Copy the functions, and edit them to specify that a different robot is doing the actions.
  - Rename the new functions so that you can specify which robot is doing what action in the code.
- 4. Add another action to both of the robots.
+ - Set the speed for this robot, using a **new** integer variable.
+ 4. Add another action to both of the robots, with its own parameter.
+ - An example would be turn, with a "degrees per second" parameter.
+ - Create new variables for each of the robots with their turn speed, passed into the new function.
+ #### What is the problem with our method currently?
+ This code is becoming very hard to maintain! We need to copy and paste quite a lot, and it is becoming hard to keep track of the robots already. Imagine if we had an entire tournament of robots running on the same code! (This is pretty unrealistic, but just bear with me.)
+ 
+ We need some other way to control multiple robots, that would definitely help with robots. Imagine if, instead of having to manage all of these functions and variables representing the robots properties, when we need a new robot, we can just say "Create a new robot" and give it its properties. We *can* do this, almost literally, with Object-Oriented Programming!
