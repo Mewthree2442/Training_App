@@ -347,15 +347,13 @@ static int square(int num){
  v
  private float score;
  private boolean tasty;
- This public says that it is visible to other classes.
- v
- public String name;
+ private String name;
  ```
  - These all look very familiar... aside from the `private` attachments, they are just like paramaters for functions, but they are all on their own line!
  - These all would be variables, but they *don't* have their equals-signs and what they are. This is because every single Food should have its own value of these, so when we create them, they will be different.
  - Speaking of creating...
  ```java
- Food(float score, boolean tasty, String name) {
+ public Food(float score, boolean tasty, String name) {
     this.score = score;
     this.tasty = tasty;
     this.name = name;
@@ -364,6 +362,7 @@ static int square(int num){
  - This looks kind of familiar. It is just a function, stripped down so it doesn't have a return value, doesn't have `static`, and is named the same as the class, `Food`.
     - These are all very important properties of a constructor ~ something called when you create a new object of the class.
     - You can write constructors just like normal functions, just as long as you don't give a return *value*. You can call `return`, but it can't have a value attached to it.
+    - It also has `public` on it, because we want *everything* to see this constructor, so we can actually call it to create things.
  - You might notice that we are setting all of these weird variables to the paramaters. They all start with `this`, and use a dot before the variable names stated above.
     - `this` refers to the class that the function is running in. If you had a `Food` called taco, instead of putting `taco` inside of the functions, you would just put `this` so it would work if you had a different food called pasta.
  ---
