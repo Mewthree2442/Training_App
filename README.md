@@ -328,7 +328,7 @@ static int square(int num){
 
  Typically instead of saying "Objects", we will say "Class". It may be confusing at first, but that is okay. Properties are sometimes called variables or attributes. The way things are made are called "constructors." Things they can do are translated to methods, which kind of makes sense. The class has a "method" of doing something. Classes hide their properties with statements called ***private*** and ***public***. (Hey, I told you it was important!)
 
- ### Basics
+ ### Properties & Constructors
 
  1. Open Food.java.
  - This isn't in the main structure of the _training folder, it is instead in the Classes folder. We have this for a bit of organization, and so it doesn't interfere with our previous projects.
@@ -366,4 +366,14 @@ static int square(int num){
     - You can write constructors just like normal functions, just as long as you don't give a return *value*. You can call `return`, but it can't have a value attached to it.
  - You might notice that we are setting all of these weird variables to the paramaters. They all start with `this`, and use a dot before the variable names stated above.
     - `this` refers to the class that the function is running in. If you had a `Food` called taco, instead of putting `taco` inside of the functions, you would just put `this` so it would work if you had a different food called pasta.
-    
+ ---
+ 3. Create a new Drink class.
+ - Create a new file in the Classes folder.
+    - Right click on the folder name `Classes` in the explorer on the left, and select "New File..."
+    - Open it, and you should see some code including the class definition inside.
+ 4. Give this Drink some properties.
+ - Examples would be color (string), bitterness (integer), or fizzy (boolean).
+ - Reference Food.java for how to write properties.
+ 5. Create a constructor for the Drink.
+ - Reference Food.java for the example on the constructor.
+ - Remember to use `this.`**[property]**` = `**[constructor parameter]**`;`.
