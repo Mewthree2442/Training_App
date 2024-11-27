@@ -347,15 +347,13 @@ static int square(int num){
  v
  private float score;
  private boolean tasty;
- This public says that it is visible to other classes.
- v
- public String name;
+ private String name;
  ```
  - These all look very familiar... aside from the `private` attachments, they are just like paramaters for functions, but they are all on their own line!
  - These all would be variables, but they *don't* have their equals-signs and what they are. This is because every single Food should have its own value of these, so when we create them, they will be different.
  - Speaking of creating...
  ```java
- Food(float score, boolean tasty, String name) {
+ public Food(float score, boolean tasty, String name) {
     this.score = score;
     this.tasty = tasty;
     this.name = name;
@@ -364,6 +362,7 @@ static int square(int num){
  - This looks kind of familiar. It is just a function, stripped down so it doesn't have a return value, doesn't have `static`, and is named the same as the class, `Food`.
     - These are all very important properties of a constructor ~ something called when you create a new object of the class.
     - You can write constructors just like normal functions, just as long as you don't give a return *value*. You can call `return`, but it can't have a value attached to it.
+    - It also has `public` on it, because we want *everything* to see this constructor, so we can actually call it to create things.
  - You might notice that we are setting all of these weird variables to the paramaters. They all start with `this`, and use a dot before the variable names stated above.
     - `this` refers to the class that the function is running in. If you had a `Food` called taco, instead of putting `taco` inside of the functions, you would just put `this` so it would work if you had a different food called pasta.
  ---
@@ -377,3 +376,15 @@ static int square(int num){
  5. Create a constructor for the Drink.
  - Reference Food.java for the example on the constructor.
  - Remember to use `this.`**[property]**` = `**[constructor parameter]**`;`.
+ ### Methods
+ 1. Open Food.java again.
+ - Because you are no longer in the "Properties & Constructors" section, you can read below the comment!
+    - I did this so we don't have multiple confusing files and classes.
+ - Look at the `String getName()` method.
+    - It looks an awfully lot like a *function*, without the `static` but there is an important difference.
+      - Functions can be used anywhere, but methods are a part of the class. They are something that uses an instance / object of the class to do an action.
+    - It returns a String that is the name of the food.
+      - We do a layer of protection like this to prevent other classes from accessing this information when they aren't supposed to, and to run any other code to control the getting.
+ - See the `void setName(String newName)` method.
+   - This one has a String paramater to set the new name.
+   - It also directly sets the `this.name` to what you put in, but you could also modify the input, or do something else in the code before setting the name.
