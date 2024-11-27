@@ -376,3 +376,15 @@ static int square(int num){
  5. Create a constructor for the Drink.
  - Reference Food.java for the example on the constructor.
  - Remember to use `this.`**[property]**` = `**[constructor parameter]**`;`.
+ ### Methods
+ 1. Open Food.java again.
+ - Because you are no longer in the "Properties & Constructors" section, you can read below the comment!
+    - I did this so we don't have multiple confusing files and classes.
+ - Look at the `String getName()` method.
+    - It looks an awfully lot like a *function*, without the `static` but there is an important difference.
+      - Functions can be used anywhere, but methods are a part of the class. They are something that uses an instance / object of the class to do an action.
+    - It returns a String that is the name of the food.
+      - We do a layer of protection like this to prevent other classes from accessing this information when they aren't supposed to, and to run any other code to control the getting.
+ - See the `void setName(String newName)` method.
+   - This one has a String paramater to set the new name.
+   - It also directly sets the `this.name` to what you put in, but you could also modify the input, or do something else in the code before setting the name.
